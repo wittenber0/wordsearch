@@ -1,16 +1,19 @@
 import time
+import sys
 
 stats = {}
 words = []
 board = []
 answers = []
-n = 16
-m = 23
+wordKey = []
+n = 5
+m = 73
 t = 0
 
 def main():
 
     loadWords()
+    loadWordKey()
     words.sort(key = lambda s: -len(s))
     loadBoard()
     start = time.time()
@@ -21,12 +24,12 @@ def main():
     printBoard(board)
     printAnswers(answers)
     print("Time to generate: %s" %(t))
+    print(stats)
     print("solving...")
     s = solve()
     print("Found:")
     printAnswers(s[0])
     print('Not Found:')
-    print(stats)
     print(s[1])
     if len(s[1]) == 0 :
         writeWordSearch()
@@ -34,10 +37,18 @@ def main():
 
 
 def loadWords():
-    with open("states2.txt", "r") as fp:
+    with open(sys.argv[1], "r") as fp:
         l = fp.readline();
         while l:
             words.append(l.rstrip())
+            stats[l.rstrip()] = 0
+            l = fp.readline()
+
+def loadWordKey():
+    with open(sys.argv[2], "r") as fp:
+        l = fp.readline();
+        while l:
+            wordKey.append(l.rstrip())
             stats[l.rstrip()] = 0
             l = fp.readline()
 
@@ -92,7 +103,7 @@ def placeWords(bucket):
     prev = copyBoard(board)
 
     w = bucket.pop(0)
-    
+
     for i in range (0, n):
         for j in range (0, m):
             v = fits(w, i, j)
@@ -213,14 +224,14 @@ def copyBoard(b):
 def solve():
     found = []
     notFound = []
-    for w in words:
+    for w in wordKey:
         f = findWord(w)
         if len(f) >1:
             found.append(f)
         else:
             notFound.append(f)
     return([found, notFound])
-        
+
 
 def findWord(w):
     for i in range(0, n):
@@ -248,14 +259,14 @@ def testFits():
 def writeWordSearch():
     global board
     f = open("results.txt", "w+")
-    
+
     for i in range (0, n):
-        
+
         for j in range (0, m):
             f.write(str(board[i][j]))
             f.write(" ")
         f.write('\n')
-        
+
     f.write('\n')
     for i in answers:
         seperator = ", "
