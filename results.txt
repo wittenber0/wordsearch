@@ -1,0 +1,68 @@
+m a s s a c h u s e t t s n n p w n r c w l 
+i m o o n o n w a c e d i o e e e o h a a o 
+s i u u e n e i r o n e l r w n s r o l s u 
+s n t t w n w s k l n l l t h n t t d i h i 
+i n h h j e m c a o e a i h a s v h e f i s 
+s e c d e c e o n r s w n c m y i d i o n i 
+s s a a r t x n s a s a o a p l r a s r g a 
+i o r k s i i s a d e r i r s v g k l n t n 
+p t o o e c c i s o e e s o h a i o a i o a 
+p a l t y u o n k m m 0 u l i n n t n a n l 
+i r i a f t k e e a i 0 t i r i i a d k e a 
+h i n l l o l b n r s c a n e a a t r 0 v b 
+a z a a o r a r t y s 0 h a i g r o e g a a 
+w o w s r e h a u l o g n i m o y w n x d m 
+a n o k i g o s c a u 0 0 0 g w o h i o a a 
+i a i a d o m k k n r 0 0 0 e a i d a h o s 
+i n d i a n a a y d i 0 a n a t n o m r e v 
+
+massachusetts: (0, 0)
+northcarolina: (0, 13)
+southcarolina: (0, 2)
+newhampshire: (0, 14)
+pennsylvania: (0, 15)
+westvirginia: (0, 16)
+connecticut: (0, 5)
+mississippi: (0, 0)
+northdakota: (0, 17)
+rhodeisland: (0, 18)
+southdakota: (0, 3)
+california: (0, 19)
+washington: (0, 20)
+louisiana: (0, 21)
+minnesota: (1, 1)
+newjersey: (1, 4)
+newmexico: (1, 6)
+tennessee: (0, 10)
+wisconsin: (1, 7)
+arkansas: (1, 8)
+colorado: (1, 9)
+delaware: (1, 11)
+illinois: (1, 12)
+kentucky: (9, 8)
+maryland: (9, 9)
+michigan: (9, 9)
+missouri: (9, 10)
+nebraska: (9, 7)
+oklahoma: (9, 6)
+virginia: (4, 16)
+alabama: (8, 21)
+arizona: (9, 1)
+florida: (10, 4)
+georgia: (12, 19)
+indiana: (16, 0)
+montana: (16, 18)
+newyork: (16, 13)
+vermont: (16, 21)
+wyoming: (13, 17)
+alaska: (10, 3)
+hawaii: (11, 0)
+kansas: (3, 8)
+nevada: (9, 20)
+oregon: (11, 5)
+idaho: (15, 16)
+maine: (16, 18)
+texas: (11, 17)
+iowa: (15, 2)
+ohio: (14, 16)
+utah: (9, 12)

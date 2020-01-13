@@ -1,0 +1,15 @@
+t h r e e s o
+s e v e n i n
+e i g h t x e
+f o u r o w t
+
+three: (0, 0)
+seven: (1, 0)
+eight: (2, 0)
+four: (3, 0)
+five: (3, 0)
+nine: (1, 6)
+one: (0, 6)
+two: (3, 6)
+six: (0, 5)
+ten: (3, 6)
