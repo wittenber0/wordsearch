@@ -6,56 +6,74 @@ words = []
 board = []
 answers = []
 wordKey = []
-n = 17
-m = 22
+n = 8
+m = 13
 t = 0
 
 def main():
+    if len(sys.argv) < 2:
+        print("Not enough args")
+        return False
+    elif len(sys.argv) == 2:
+        print("Running with %s as words and seeds..." % (sys.argv[1]))
+        run(sys.argv[1], sys.argv[1], n, m)
+    elif len(sys.argv) == 3:
+        print("Running with %s as words and %s as seeds..." % (sys.argv[1], sys.argv[2]))
+    elif len(sys.argv) == 4:
+        print("Not enough args")
+        return False
+    elif len(sys.argv) == 6:
+        print("Running in full mode with 4 groups...")
 
-    loadWords()
-    loadWordKey()
+
+def run(wordFile, seedFile, rows, cols):
+    loadWords(seedFile)
+    loadWordKey(wordFile)
     words.sort(key = lambda s: -len(s))
-    loadBoard()
+    loadBoard(rows, cols)
     start = time.time()
+    print("Running...")
     res = placeWords(words[:])
     stop = time.time()
     t = stop - start
-    print(res)
-    printBoard(board)
-    printAnswers(answers)
-    print("Time to generate: %s" %(t))
-    print(stats)
-    print("solving...")
-    s = solve()
-    print("Found:")
-    printAnswers(s[0])
-    print('Not Found:')
-    print(s[1])
-    if len(s[1]) == 0 :
-        writeWordSearch()
+    if res:
+        print(res)
+        printBoard(board)
+        print("Time to generate: %s" %(t))
+        print(stats)
+        print("solving...")
+        s = solve()
+        print("Found:")
+        printAnswers(s[0])
+        print('Not Found:')
+        print(s[1])
+        if len(s[1]) == 0 :
+            writeWordSearch()
+    else:
+        print("unable to place all words in grid")
 
 
 
-def loadWords():
-    with open(sys.argv[1], "r") as fp:
+def loadWords(s):
+    with open(s, "r") as fp:
         l = fp.readline();
         while l:
             words.append(l.rstrip())
             stats[l.rstrip()] = 0
             l = fp.readline()
 
-def loadWordKey():
-    with open(sys.argv[2], "r") as fp:
+def loadWordKey(w):
+    with open(w, "r") as fp:
         l = fp.readline();
         while l:
             wordKey.append(l.rstrip())
             stats[l.rstrip()] = 0
             l = fp.readline()
 
-def loadBoard():
-    for i in range (0, n):
+def loadBoard(rows, cols):
+    for i in range (0, rows):
         r = []
-        for j in range (0, m):
+        for j in range (0, cols):
             r.append(0)
         board.append(r)
 

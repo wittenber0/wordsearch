@@ -1,0 +1,12 @@
+southcarolina
+northcarolina
+massachusetts
+westvirginia
+pennsylvania
+newhampshire
+newjersey
+minnesota
+louisiana
+oklahoma
+nebraska
+missouri
